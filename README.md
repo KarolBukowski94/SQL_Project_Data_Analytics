@@ -37,32 +37,50 @@ Each query in this project was designed to explore key aspects of the data analy
 This queries pinpoints the highest-paying data analyst roles 💰, highlighting the most lucrative opportunities in the field.
 
 ```sql
-SELECT	
+--Global--
+SELECT
+	name AS company_name,
 	job_id,
 	job_title,
-	job_location,
-	job_schedule_type,
 	salary_year_avg,
-	job_posted_date,
-    name AS company_name
+	job_schedule_type,
+	job_posted_date::DATE
 FROM
-    job_postings_fact
-LEFT JOIN company_dim ON job_postings_fact.company_id = company_dim.company_id
+	job_postings_fact
+LEFT JOIN 
+	company_dim ON job_postings_fact.company_id = company_dim.company_id
 WHERE
-    job_title_short = 'Data Analyst' AND 
-    job_location = 'Anywhere' AND 
-    salary_year_avg IS NOT NULL
+	job_title_short = 'Data Analyst'
+	AND salary_year_avg IS NOT NULL
 ORDER BY
-    salary_year_avg DESC
+	salary_year_avg DESC 
+LIMIT 10;
+```
+```sql
+--Poland--
+SELECT
+	name AS company_name,
+	job_id,
+	job_title,
+	salary_year_avg,
+	job_schedule_type,
+	job_posted_date::DATE
+FROM
+	job_postings_fact
+LEFT JOIN 
+	company_dim ON job_postings_fact.company_id = company_dim.company_id
+WHERE
+	job_title_short = 'Data Analyst'
+	AND salary_year_avg IS NOT NULL
+	AND job_country = 'Poland'
+ORDER BY
+	salary_year_avg DESC 
 LIMIT 10;
 ```
 Here's the breakdown of the top data analyst jobs in 2023:
-- **Wide Salary Range:** Top 10 paying data analyst roles span from $184,000 to $650,000, indicating significant salary potential in the field.
-- **Diverse Employers:** Companies like SmartAsset, Meta, and AT&T are among those offering high salaries, showing a broad interest across different industries.
-- **Job Title Variety:** There's a high diversity in job titles, from Data Analyst to Director of Analytics, reflecting varied roles and specializations within data analytics.
 
-![Top Paying Roles](assets/1_top_paying_roles.png)
-*Bar graph visualizing the salary for the top 10 salaries for data analysts; ChatGPT generated this graph from my SQL query results*
+![Top Paying Roles](assets\1_top_paying_jobs.PNG)
+*Bar charts generated in Power BI from my SQL query results, showcasing the top 10 highest-paying data analyst roles in 2023, both worldwide and in Poland, along with their corresponding salaries*
 
 ### 2. Skills for Top Paying Jobs
 To understand what skills are required for the top-paying jobs, I joined the job postings with the skills data, providing insights into what employers value for high-compensation roles.
