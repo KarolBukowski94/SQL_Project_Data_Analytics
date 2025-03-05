@@ -1,36 +1,34 @@
  # Introduction
 
-Welcome to my project, where I showcase my expertise in using **SQL** as a powerful tool for data analysis! 📊
+Welcome to my project, where I showcase my expertise in using **SQL** as a powerful tool for data analysis! 
 
-Special Thanks to [Luke Barousse](https://github.com/lukebarousse) and [Kelly Adams](https://github.com/kellyjadams) for developing the [SQL Data Analytics Course](https://www.youtube.com/watch?v=7mz73uXD9DA&t=14011s), which provides aspiring data analysts with a structured and accessible way to master **SQL**.
+Special thanks to [Luke Barousse](https://github.com/lukebarousse) and [Kelly Adams](https://github.com/kellyjadams) for developing the [SQL Data Analytics Course](https://www.youtube.com/watch?v=7mz73uXD9DA&t=14011s), which provides aspiring data analysts with a structured and accessible way to master **SQL**.
 
 The dataset used in this project is sourced from the course materials and contains real-world job posting data from 2023. It provides valuable insights into job titles, salaries, locations, essential skills, and other key employment factors.
 
-
-📊 Dive into the data job market! Focusing on data analyst roles, this project explores 💰 top-paying jobs, 🔥 in-demand skills, and 📈 where high demand meets high salary in data analytics.
-
-🔍 SQL queries? Check them out here: [project_sql folder](/project_sql/)
-
 # Background
-Driven by a quest to navigate the data analyst job market more effectively, this project was born from a desire to pinpoint top-paid and in-demand skills, streamlining others work to find optimal jobs.
+This project aims to help aspiring data analysts like myself navigate the job market by providing valuable insights into the global and Polish data analyst job landscape. 
 
-Data hails from my [SQL Course]. It's packed with insights on job titles, salaries, locations, and essential skills.
+### 🔍 The analysis focuses on data analyst roles, covering:
+1. 💰 Highest-paying jobs
+2. 🔧 Key skills required for top-paying roles
+3. 🔥 Most in-demand skills
+4. 💰🔧 Top-paying skills
+5. 📚💡 Optimal skills to learn for career growth
+6. 🎓 Degree requirements
+7. 📅 Months with the highest number of job postings
 
-### The questions I wanted to answer through my SQL queries were:
+# Tools Used
+To conduct this analysis, I utilized several essential tools:
 
-1. What are the top-paying data analyst jobs?
-2. What skills are required for these top-paying jobs?
-3. What skills are most in demand for data analysts?
-4. Which skills are associated with higher salaries?
-5. What are the most optimal skills to learn?
+- **SQL -** the core of my analysis, allowing me to extract meaningful insights from the database.
+- **PostgreSQL -** the chosen database management system for handling job posting data.
+- **Visual Studio Code -** used for managing the database and executing SQL queries efficiently.
+- **Git & GitHub -** essential for version control, sharing SQL scripts, and tracking project progress.
+- **Power BI -** used for data visualization, transforming extracted data by SQL into meaningful insights through charts.
 
-# Tools I Used
-For my deep dive into the data analyst job market, I harnessed the power of several key tools:
-
-- **SQL:** The backbone of my analysis, allowing me to query the database and unearth critical insights.
-- **PostgreSQL:** The chosen database management system, ideal for handling the job posting data.
-- **Visual Studio Code:** My go-to for database management and executing SQL queries.
-- **Git & GitHub:** Essential for version control and sharing my SQL scripts and analysis, ensuring collaboration and project tracking.
+🔍 [**SQL queries**](/project_sql/)  
+📊 [**Power BI charts**](/assets/)
 
 # The Analysis
 Each query for this project aimed at investigating specific aspects of the data analyst job market. Here’s how I approached each question:
