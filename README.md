@@ -421,11 +421,11 @@ ORDER BY
 *Charts showing monthly job postings for data analysts in 2023 globally and in Poland*
 # What I Learned
 
-Throughout this adventure, I've turbocharged my SQL toolkit with some serious firepower:
+Throughout this project, I’ve learned SQL-related skills including:
 
-- **🧩 Complex Query Crafting:** Mastered the art of advanced SQL, merging tables like a pro and wielding WITH clauses for ninja-level temp table maneuvers.
-- **📊 Data Aggregation:** Got cozy with GROUP BY and turned aggregate functions like COUNT() and AVG() into my data-summarizing sidekicks.
-- **💡 Analytical Wizardry:** Leveled up my real-world puzzle-solving skills, turning questions into actionable, insightful SQL queries.
+- **🧩 Complex Query Crafting:** joining tables, using subqueries and wielding WITH clauses for temporary table maneuvers.
+- **📊 Data Aggregation:** making aggregate functions like COUNT() and AVG() and using them by GROUP BY.
+- **💡 Analytical Wizardry:** Sharpened my ability to tackle real-world challenges, transforming complex questions into insightful SQL queries.
 
 # Conclusions
 
