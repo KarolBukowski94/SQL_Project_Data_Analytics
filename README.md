@@ -77,10 +77,10 @@ ORDER BY
 	salary_year_avg DESC 
 LIMIT 10;
 ```
-Here's the breakdown of the top data analyst jobs in 2023:
-
-![Top Paying Roles](assets/1_top_paying_jobs.png)
+![Top Paying Jobs](assets/1_top_paying_jobs.PNG)
 *Bar charts generated in Power BI from my SQL query results, showcasing the top 10 highest-paying data analyst roles in 2023, both worldwide and in Poland, along with their corresponding salaries*
+
+Here's the breakdown of the top data analyst jobs in 2023:
 
 ### 2. Skills for Top Paying Jobs
 To understand what skills are required for the top-paying jobs, I joined the job postings with the skills data, providing insights into what employers value for high-compensation roles.
@@ -118,7 +118,7 @@ Here's the breakdown of the most demanded skills for the top 10 highest paying d
 - **Tableau** is also highly sought after, with a bold count of 6.
 Other skills like **R**, **Snowflake**, **Pandas**, and **Excel** show varying degrees of demand.
 
-![Top Paying Skills](assets/2_top_paying_roles_skills.png)
+![Top Paying Skills](assets/2_top_paying_roles_skills.PNG)
 *Bar graph visualizing the count of skills for the top 10 paying jobs for data analysts; ChatGPT generated this graph from my SQL query results*
 
 ### 3. In-Demand Skills for Data Analysts
