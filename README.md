@@ -77,7 +77,7 @@ ORDER BY
 	salary_year_avg DESC 
 LIMIT 10;
 ```
-![Top Paying Jobs](assets\2_top_paying_jobs_skills.png)
+![Top Paying Jobs](/assets/2_top_paying_jobs_skills.png)
 *Bar charts generated in Power BI from my SQL query results, showcasing the top 10 highest-paying data analyst roles in 2023, both worldwide and in Poland, along with their corresponding salaries*
 
 Here's the breakdown of the top data analyst jobs in 2023:
