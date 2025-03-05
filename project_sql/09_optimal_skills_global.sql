@@ -1,3 +1,4 @@
+--Global--
 WITH
     skills_demand AS (
         SELECT

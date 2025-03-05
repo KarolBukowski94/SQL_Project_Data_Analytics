@@ -1,3 +1,4 @@
+--Poland--
 SELECT
     skills AS skill,
     ROUND (AVG (salary_year_avg), 0) AS avg_salary

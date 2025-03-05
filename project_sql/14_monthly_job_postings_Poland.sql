@@ -1,3 +1,4 @@
+--Poland--
 SELECT 
     EXTRACT(MONTH FROM job_posted_date) AS month,
     COUNT(job_id) AS number_of_postings_Poland

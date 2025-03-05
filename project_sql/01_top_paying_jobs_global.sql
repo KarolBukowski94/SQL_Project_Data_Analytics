@@ -1,3 +1,4 @@
+--Global--
 SELECT
 	name AS company_name,
 	job_id,

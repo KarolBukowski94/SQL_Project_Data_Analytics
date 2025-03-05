@@ -31,10 +31,10 @@ To conduct this analysis, I utilized several essential tools:
 📊 [**Power BI charts**](/assets/)
 
 # The Analysis
-Each query for this project aimed at investigating specific aspects of the data analyst job market. Here’s how I approached each question:
+Each query in this project was designed to explore key aspects of the data analyst job market, both globally and in Poland. Here’s how I approached each question:
 
-### 1. Top Paying Data Analyst Jobs
-To identify the highest-paying roles, I filtered data analyst positions by average yearly salary and location, focusing on remote jobs. This query highlights the high paying opportunities in the field.
+### 1. Top-Paying Data Analyst Jobs
+This queries pinpoints the highest-paying data analyst roles 💰, highlighting the most lucrative opportunities in the field.
 
 ```sql
 SELECT	
