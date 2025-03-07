@@ -1,4 +1,3 @@
---Poland--
 WITH top_paying_jobs AS
 (
     SELECT
@@ -17,7 +16,7 @@ WITH top_paying_jobs AS
     ORDER BY
         salary_year_avg DESC
     LIMIT
-        10
+        12
 )
 SELECT
     top_paying_jobs.*,
