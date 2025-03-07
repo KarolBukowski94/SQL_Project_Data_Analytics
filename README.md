@@ -33,7 +33,7 @@ To conduct this analysis, I utilized several essential tools:
 # The Analysis
 Each query in this project was designed to explore key aspects of the data analyst job market in 2023, both globally and in Poland. Here’s how I approached each question:
 
-### 1. Top-Paying Data Analyst Jobs
+### 1. Top Paying Data Analyst Jobs
 This queries pinpoints the highest-paying data analyst roles 💰, highlighting the most lucrative opportunities in the field.
 
 ```sql
@@ -94,7 +94,7 @@ LIMIT 10;
 - **Role Specialization**: Globally, there's a pronounced emphasis on high-level leadership and tech/AI innovation, whereas the Polish market focuses on specialization within traditional sectors, balancing between strategic roles (Data Architect) and general data analytics positions.
 
 ![Top Paying Jobs](assets/1_top_paying_jobs.PNG)
-*Bar charts generated in Power BI from my SQL query results, showcasing the top 10 highest-paying data analyst roles in 2023, both worldwide and in Poland, along with their corresponding salaries*
+*Bar charts generated in Power BI from my SQL query results, showcasing the top 10 highest-paying data analyst roles in 2023, both worldwide and in Poland, along with their corresponding salaries.*
 
 ### 2. Skills for Top Paying Jobs
 To identify the 🔧 most in-demand skills for the highest-paying jobs 💰, I merged job postings with skills data and expand the limit of top-paying jobs to 20 to dive deeper into the market. This analysis reveals key competencies that employers prioritize for top-paying roles.
@@ -172,7 +172,8 @@ ORDER BY
 - **Excel** continues to hold value in both markets, highlighting the ongoing relevance of spreadsheet skills despite the rise of advanced analytics tools.
 
 ![Top Paying Jobs Skills](assets/2_top_paying_jobs_skills.png)
-*Bar graphs illustrating the count of the most important skills for the top 20 paying jobs for data analysts in 2023, both globally and in Poland*
+
+*Bar charts generated in Power BI from my SQL query results, illustrating the count of the most important skills for the top 20 paying jobs for data analysts in 2023, both globally and in Poland.*
 
 ### 3. In-Demand Skills for Data Analysts
 This query revealed the most commonly requested skills in job postings, highlighting key areas of high demand 🔥.
@@ -215,10 +216,13 @@ ORDER BY
     demand_count DESC
 LIMIT 5;
 ```
-![Top Demanded Skills](assets/3_top_demanded_skills.png)
-*A chart demonstrating the 5 most in-demand skills in data analyst job postings in 2023, both globally and in Poland.*
+**Key Takeways**
 
-Here's the breakdown of the most demanded skills for data analysts in 2023:
+- **SQL** and **Excel** remain fundamental, emphasizing the need for strong foundational skills in data processing and spreadsheet manipulation.
+- Programming and Visualization Tools like **Python**, **Tableau**, and **Power BI** are essential, pointing towards the increasing importance of technical skills in data storytelling and decision support.
+
+![Top Demanded Skills](assets/3_top_demanded_skills.png)
+*Bar charts generated in Power BI from my SQL query results, demonstrating the 5 most in-demand skills in data analyst job postings in 2023, both globally and in Poland.*
 
 ### 4. Skills Based on Salary
 Analyzing the average salaries associated with various skills revealed which ones offer the highest pay 💰.
@@ -263,10 +267,15 @@ ORDER BY
     avg_salary DESC
 LIMIT 10;
 ```
-![Top Paying Skills](assets/4_top_paying_skills.png)
-*Charts of the average salary for the top 10 paying skills for data analysts*
+**Key Takeways**
 
-Here's a breakdown of the results for top paying skills for Data Analysts:
+- **Niche Technologies Dominate Globally**: The highest salaries are tied to specialized and emerging skills like **SVN** ($400K), **Solidity** ($179K), and **Couchbase** ($161K), indicating a strong demand for cutting-edge technologies in the global market.
+- **Cloud & Database Expertise in Poland**: In Poland, **MongoDB**, **Linux**, and **AWS** lead the top-paying skills, each offering $165K, emphasizing the importance of cloud computing and database management in the local job market.
+- **Big Data vs. Emerging Tech**: The global market rewards niche and emerging technologies, while Poland prioritizes cloud infrastructure and big data skills like **Hadoop** ($134K) and **NoSQL** ($132K) for high salaries.
+- **Salary Trends**: While global salaries can skyrocket for specialized tech, Poland's highest-paying skills remain within the $165K range, showing a more balanced distribution across in-demand technologies.
+
+![Top Paying Skills](assets/4_top_paying_skills.png)
+*Bar charts generated in Power BI from my SQL query results, presenting the average salary for the top 10 paying skills for data analysts job postings in 2023, both globally and in Poland.*
 
 ### 5. Most Optimal Skills to Learn
 
@@ -319,7 +328,7 @@ WHERE
 ORDER BY
     avg_salary DESC,
     demand_count DESC
-LIMIT 10;
+LIMIT 15;
 ```
 ```sql
 --Poland--
@@ -366,20 +375,27 @@ FROM
 INNER JOIN
     average_salary ON skills_demand.skill_id = average_salary.skill_id
 WHERE
-    demand_count > 2
+    demand_count > 4
 ORDER BY
     avg_salary DESC,
     demand_count DESC
-LIMIT 10;
+LIMIT 15;
 ```
-![Optimal Skills](assets/5_optimal_skills.png)
-*Table of the most optimal skills for data analyst sorted by salary*
+**Key Takeways**
 
-Here's a breakdown of the most optimal skills for Data Analysts in 2023: 
+- **SQL** & **Python** dominate demand but don’t command the highest salaries.
+- **AWS** and **Azure** lead globally, while in Poland, **Airflow**, **Windows**, **GCP**, and **Spark** highlight the growing demand for cloud-based infrastructure, workflow automation & big data processing.
+- BI tools **Tableau** and **Looker** remain highly valuable, while **Power BI** is widely used but tends to offer slightly lower salaries.
+- **R** remains important globally but has lower demand in Poland, suggesting a regional shift toward Python-based analytics.
+- **Excel** remains widely used but pays less, confirming its role as a fundamental skill rather than a high-paying specialty.
+
+![Optimal Skills](assets/5_optimal_skills.png)
+
+*Table generated in Power BI from my SQL query results, demonstrating the most optimal skills to learn for data analyst sorted by salary, both globally and in Poland.*
 
 ### 6. Is a degree required for data analyst roles?
 
-This query helps aspiring data analysts navigate the job market by calculating the percentage of job postings that don’t require a degree 🎓. This insight assists job seekers in deciding whether to pursue a degree or focus on self-learning to develop practical skills 🧠.
+This analysis helps aspiring data analysts understand the job market by determining the proportion of job postings that don’t require a degree 🎓. It provides valuable insight for job seekers, guiding them on whether to invest in formal education or prioritize self-learning to build practical skills 🧠.
 ```sql
 --Global--
 SELECT 
@@ -401,10 +417,18 @@ WHERE
     job_title_short = 'Data Analyst'
     AND job_country = 'Poland';
 ```
-![Degree](assets/6_degree.png)
-*Pie chart showing the percentage of Data Analyst job postings that do not require a degree*
+**Key Takeways**
 
-### 6. When are data analyst job postings most frequent?
+- **Global Market**: While **39%** of data analyst roles globally do not explicitly require a degree, this doesn’t necessarily mean employers don’t value formal education. A degree is still mentioned in **61%** of job postings, indicating it remains a key qualification for many roles.
+- **Polish Market**: **56%** of job postings do not list a degree as a requirement, suggesting a more skills-based hiring approach. However, **44%** of positions still specify a degree, meaning formal education can still be a competitive advantage.
+- **Conclusions**: Opportunities exist for candidates without degrees, especially in Poland, where practical experience and certifications may carry more weight. However, a degree can still improve job prospects, particularly in companies that value traditional education. Even when not explicitly stated, employers may still favor candidates with formal academic backgrounds.
+
+![Degree](assets/6_degree.png)
+*Pie chart showing the percentage of Data Analyst job postings that do require/not require a degree*
+
+### 7. When are data analyst job postings most frequent?
+
+This analysis identifies peak periods 📅 for data analyst job postings, enabling job seekers to strategically time their applications for the best opportunities.
 
 ```sql
 --Global--
@@ -435,6 +459,13 @@ GROUP BY
 ORDER BY
     month;
 ```
+**Key Takeways**
+
+- January sees the highest number of job postings as companies ramp up hiring in the new year.
+- Hiring slows mid-year (May globally, June in Poland), followed by a secondary increase in August as recruitment rebounds after the summer slowdown.
+- A gradual decline occurs toward the end of the year (September–December) as hiring activity slows.
+- **Conclusion:** Job seekers are most likely to find opportunities at the beginning of the year, with a smaller hiring wave in late summer.
+
 ![Job Postings](assets/7_monthly_job_postings.png)
 *Charts showing monthly job postings for data analysts in 2023 globally and in Poland*
 # What I Learned
