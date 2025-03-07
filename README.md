@@ -31,7 +31,7 @@ To conduct this analysis, I utilized several essential tools:
 📊 [**Power BI charts**](/assets/)
 
 # The Analysis
-Each query in this project was designed to explore key aspects of the data analyst job market, both globally and in Poland. Here’s how I approached each question:
+Each query in this project was designed to explore key aspects of the data analyst job market in 2023, both globally and in Poland. Here’s how I approached each question:
 
 ### 1. Top-Paying Data Analyst Jobs
 This queries pinpoints the highest-paying data analyst roles 💰, highlighting the most lucrative opportunities in the field.
@@ -77,13 +77,27 @@ ORDER BY
 	salary_year_avg DESC 
 LIMIT 10;
 ```
+**Key Takeways**
+
+**Global Market**:
+- **Salary Range**: Data Analyst salaries fall between $285K and $400K, with Mantys offering an exceptional $650K.
+- **Job Titles**: There's a wide range—from standard Data Analyst roles to specialized and leadership positions like Director of Safety Data Analysis and Head of Data Analytics.
+- **Key Companies**: Dominated by tech/AI leaders (Meta, Anthropic, OpenAI, Torc Robotics) and high-profile finance/security firms (Citigroup, Illuminate Mission Solutions). Leadership roles naturally command higher pay, and startups like Mantys are willing to offer premium salaries to attract top talent.
+
+**Polish Market**:
+- **Salary Range**: Salaries are more modest, with Data Architect roles at around $165K—roughly 50% higher than the more common Data Analyst roles, which typically hover around $111K.
+- **Job Titles**: The market offers a mix of general and specialized roles, including Data Architect, Marketing Data Analyst, and Data Analyst – Risk.
+- **Key Companies**: Recurrent postings from companies such as Alter Solutions, Allegro, Bosch Group, and SumUp highlight steady demand across various sectors.
+
+**Comparison**:
+- **Compensation**: Global salaries are significantly higher with a broader range and more opportunities at the leadership level, while the Polish market maintains a consistent, modest pay scale.
+- **Role Specialization**: Globally, there's a pronounced emphasis on high-level leadership and tech/AI innovation, whereas the Polish market focuses on specialization within traditional sectors, balancing between strategic roles (Data Architect) and general data analytics positions.
+
 ![Top Paying Jobs](assets/1_top_paying_jobs.PNG)
 *Bar charts generated in Power BI from my SQL query results, showcasing the top 10 highest-paying data analyst roles in 2023, both worldwide and in Poland, along with their corresponding salaries*
 
-Here's the breakdown of the top data analyst jobs in 2023:
-
 ### 2. Skills for Top Paying Jobs
-To identify the 🔧 most in-demand skills for the highest-paying jobs 💰 from the previous query, I merged job postings with skills data. This analysis reveals key competencies that employers prioritize for top-paying roles.
+To identify the 🔧 most in-demand skills for the highest-paying jobs 💰, I merged job postings with skills data and expand the limit of top-paying jobs to 20 to dive deeper into the market. This analysis reveals key competencies that employers prioritize for top-paying roles.
 ```sql
 --Global--
 WITH top_paying_jobs AS
@@ -103,7 +117,7 @@ WITH top_paying_jobs AS
     ORDER BY
         salary_year_avg DESC
     LIMIT
-        14
+        20
 )
 SELECT
     top_paying_jobs.*,
@@ -137,7 +151,7 @@ WITH top_paying_jobs AS
     ORDER BY
         salary_year_avg DESC
     LIMIT
-        10
+        20
 )
 SELECT
     top_paying_jobs.*,
@@ -151,10 +165,14 @@ INNER JOIN
 ORDER BY
     salary_year_avg DESC;
 ```
-![Top Paying Jobs Skills](assets/2_top_paying_jobs_skills.png)
-*Bar graphs illustrating the count of skills for the top 10 paying jobs for data analysts in 2023, both globally and in Poland*
+**Key Takeways**
 
-Here's the breakdown of the most demanded skills for the top 10 highest paying data analyst jobs in 2023:
+- **SQL**, **Python**, and **Tableau** are the top skills in both the global and Polish data analytics markets.
+- Poland places a stronger emphasis on big data and cloud technologies (**GCP**, **Spark**, **Airflow**), whereas globally, traditional analytics tools (**R**, **SAS**, **Power BI**) remain key for high-paying roles.
+- **Excel** continues to hold value in both markets, highlighting the ongoing relevance of spreadsheet skills despite the rise of advanced analytics tools.
+
+![Top Paying Jobs Skills](assets/2_top_paying_jobs_skills.png)
+*Bar graphs illustrating the count of the most important skills for the top 20 paying jobs for data analysts in 2023, both globally and in Poland*
 
 ### 3. In-Demand Skills for Data Analysts
 This query revealed the most commonly requested skills in job postings, highlighting key areas of high demand 🔥.

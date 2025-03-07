@@ -16,7 +16,7 @@ WITH top_paying_jobs AS
     ORDER BY
         salary_year_avg DESC
     LIMIT
-        14
+        20
 )
 SELECT
     top_paying_jobs.*,
