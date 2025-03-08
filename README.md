@@ -223,7 +223,7 @@ LIMIT 5;
 - Programming and Visualization Tools such as **Python**, **Tableau**, and **Power BI** are essential, highlighting the growing demand for technical skills in data storytelling and decision-making.
 
 ![Top Demanded Skills](assets/3_top_demanded_skills.png)
-*Bar charts generated in Power BI from my SQL query results showcase the 5 most in-demand skills in data analyst job postings in 2023, both globally and in Poland*
+*Column charts generated in Power BI from my SQL query results showcase the 5 most in-demand skills in data analyst job postings in 2023, both globally and in Poland*
 
 ### 4. Highest-Paying Skills 💰🔧
 Analyzing the average salaries associated with various skills revealed which ones command the highest pay.
@@ -392,7 +392,7 @@ LIMIT 15;
 
 ![Optimal Skills](assets/5_optimal_skills.png)
 
-*A table generated in Power BI from my SQL query results showcases the most optimal skills to learn for data analysts, sorted by salary, both globally and in Poland.*
+*Tables generated in Power BI from my SQL query results showcases the most optimal skills to learn for data analysts, sorted by salary, both globally and in Poland.*
 
 ### 6. Degree requirements 🎓
 
@@ -426,7 +426,7 @@ WHERE
 
 
 ![Degree](assets/6_degree.png)
-*A pie chart created in Power BI from my SQL query results illustrates the percentage of data analyst job postings from 2023 that require versus do not require a degree, both globally and in Poland*
+*Pie charts created in Power BI from my SQL query results illustrates the percentage of data analyst job postings from 2023 that require versus do not require a degree, both globally and in Poland*
 
 ### 7. Peak Hiring Months 📅📈
 
@@ -469,7 +469,7 @@ ORDER BY
 - **Conclusion:** Job seekers are most likely to find opportunities at the beginning of the year, with a smaller hiring surge in late summer.
 
 ![Job Postings](assets/7_monthly_job_postings.png)
-*Plot charts generated in Power BI from my SQL query results reveal the monthly job postings for data analysts in 2023, both globally and in Poland*
+*Line charts generated in Power BI from my SQL query results reveal the monthly job postings for data analysts in 2023, both globally and in Poland*
 
 # What I Learned
 
