@@ -10,13 +10,13 @@ The dataset used in this project is sourced from the course materials and contai
 This project aims to help aspiring data analysts like myself navigate the job market by providing valuable insights into the global and Polish data analyst job landscape. 
 
 ### 🔍 The analysis focuses on data analyst roles, covering:
-1. 💰 Highest-paying jobs
-2. 🔧 Key skills required for top-paying roles
-3. 🔥 Most in-demand skills
-4. 💰🔧 Top-paying skills
-5. 📚💡 Optimal skills to learn for career growth
-6. 🎓 Degree requirements
-7. 📅 Months with the highest number of job postings
+1. Top-Paying Jobs 💰
+2. Skills for Top-Paying Jobs 🔧
+3. Most In-Demand Skills 🔥
+4. Top-paying skills 💰🔧
+5. Most Optimal Skills to Learn 📚💡
+6. Degree requirements 🎓
+7. Peak Hiring Months 📅📈
 
 # Tools Used
 To conduct this analysis, I utilized several essential tools:
@@ -26,6 +26,7 @@ To conduct this analysis, I utilized several essential tools:
 - **Visual Studio Code -** used for managing the database and executing SQL queries efficiently.
 - **Git & GitHub -** essential for version control, sharing SQL scripts, and tracking project progress.
 - **Power BI -** used for data visualization, transforming extracted data by SQL into meaningful insights through charts.
+- **ChatGPT (Plus Subscription)** - assisted me in deriving data-driven insights and crafting clear, concise summaries.
 
 🔍 [**SQL queries**](/project_sql/)  
 📊 [**Power BI charts**](/assets/)
@@ -33,8 +34,8 @@ To conduct this analysis, I utilized several essential tools:
 # The Analysis
 Each query in this project was designed to explore key aspects of the data analyst job market in 2023, both globally and in Poland. Here’s how I approached each question:
 
-### 1. Top Paying Data Analyst Jobs
-This queries pinpoints the highest-paying data analyst roles 💰, highlighting the most lucrative opportunities in the field.
+### 1. Top-Paying Jobs 💰
+This queries pinpoints the highest-paying data analyst roles, highlighting the most lucrative opportunities in the field.
 
 ```sql
 --Global--
@@ -96,8 +97,8 @@ LIMIT 10;
 ![Top Paying Jobs](assets/1_top_paying_jobs.PNG)
 *Bar charts generated in Power BI from my SQL query results, showcasing the top 10 highest-paying data analyst roles in 2023, both worldwide and in Poland, along with their corresponding salaries.*
 
-### 2. Skills for Top Paying Jobs
-To identify the 🔧 most in-demand skills for the highest-paying jobs 💰, I merged job postings with skills data and expand the limit of top-paying jobs to 20 to dive deeper into the market. This analysis reveals key competencies that employers prioritize for top-paying roles.
+### 2. Skills for Top-Paying Jobs 🔧
+To identify the most in-demand skills for the highest-paying jobs, I merged job postings with skills data and expand the limit of top-paying jobs to 20 to dive deeper into the market. This analysis reveals key competencies that employers prioritize for top-paying roles.
 ```sql
 --Global--
 WITH top_paying_jobs AS
@@ -175,8 +176,8 @@ ORDER BY
 
 *Bar charts generated in Power BI from my SQL query results, illustrating the count of the most important skills for the top 20 paying jobs for data analysts in 2023, both globally and in Poland.*
 
-### 3. In-Demand Skills for Data Analysts
-This query revealed the most commonly requested skills in job postings, highlighting key areas of high demand 🔥.
+### 3. Most In-Demand Skills 🔥
+This query revealed the most commonly requested skills in job postings, highlighting key areas of high demand.
 ```sql
 --Global--
 SELECT
@@ -224,8 +225,8 @@ LIMIT 5;
 ![Top Demanded Skills](assets/3_top_demanded_skills.png)
 *Bar charts generated in Power BI from my SQL query results, demonstrating the 5 most in-demand skills in data analyst job postings in 2023, both globally and in Poland.*
 
-### 4. Skills Based on Salary
-Analyzing the average salaries associated with various skills revealed which ones offer the highest pay 💰.
+### 4. Top-paying skills 💰🔧
+Analyzing the average salaries associated with various skills revealed which ones offer the highest pay.
 ```sql
 --Global--
 SELECT
@@ -277,7 +278,7 @@ LIMIT 10;
 ![Top Paying Skills](assets/4_top_paying_skills.png)
 *Bar charts generated in Power BI from my SQL query results, presenting the average salary for the top 10 paying skills for data analysts job postings in 2023, both globally and in Poland.*
 
-### 5. Most Optimal Skills to Learn
+### 5. Most Optimal Skills to Learn 📚💡
 
 By combining demand and salary insights, this query aimed to identify skills that are both highly sought after 🔥 and well-paid 💰, offering a strategic focus for skill development.
 
@@ -393,7 +394,7 @@ LIMIT 15;
 
 *Table generated in Power BI from my SQL query results, demonstrating the most optimal skills to learn for data analyst sorted by salary, both globally and in Poland.*
 
-### 6. Is a degree required for data analyst roles?
+### 6. Degree requirements 🎓
 
 This analysis helps aspiring data analysts understand the job market by determining the proportion of job postings that don’t require a degree 🎓. It provides valuable insight for job seekers, guiding them on whether to invest in formal education or prioritize self-learning to build practical skills 🧠.
 ```sql
@@ -424,9 +425,9 @@ WHERE
 - **Conclusions**: Opportunities exist for candidates without degrees, especially in Poland, where practical experience and certifications may carry more weight. However, a degree can still improve job prospects, particularly in companies that value traditional education. Even when not explicitly stated, employers may still favor candidates with formal academic backgrounds.
 
 ![Degree](assets/6_degree.png)
-*Pie chart showing the percentage of Data Analyst job postings that do require/not require a degree*
+*Pie chart created in Power BI from my SQL query results, showing the percentage of Data Analyst job postings that do require/not require a degree*
 
-### 7. When are data analyst job postings most frequent?
+### 7. Peak Hiring Months 📅📈
 
 This analysis identifies peak periods 📅 for data analyst job postings, enabling job seekers to strategically time their applications for the best opportunities.
 
@@ -461,32 +462,61 @@ ORDER BY
 ```
 **Key Takeways**
 
-- January sees the highest number of job postings as companies ramp up hiring in the new year.
-- Hiring slows mid-year (May globally, June in Poland), followed by a secondary increase in August as recruitment rebounds after the summer slowdown.
-- A gradual decline occurs toward the end of the year (September–December) as hiring activity slows.
+- **January** sees the highest number of job postings as companies ramp up hiring in the new year.
+- Hiring slows mid-year (May globally, June in Poland), followed by a secondary increase in **August** as recruitment rebounds after the summer slowdown.
+- Hiring activity gradually declines toward the end of the year (September–December), reflecting a typical slowdown in recruitment due to holidays and year-end budget cycles.
 - **Conclusion:** Job seekers are most likely to find opportunities at the beginning of the year, with a smaller hiring wave in late summer.
 
 ![Job Postings](assets/7_monthly_job_postings.png)
-*Charts showing monthly job postings for data analysts in 2023 globally and in Poland*
+*Plot Charts generated in Power BI from my SQL query results, revealing monthly job postings for data analysts in 2023 globally and in Poland*
+
 # What I Learned
 
-Throughout this project, I’ve learned SQL-related skills including:
-
-- **🧩 Complex Query Crafting:** joining tables, using subqueries and wielding WITH clauses for temporary table maneuvers.
-- **📊 Data Aggregation:** making aggregate functions like COUNT() and AVG() and using them by GROUP BY.
-- **💡 Analytical Wizardry:** Sharpened my ability to tackle real-world challenges, transforming complex questions into insightful SQL queries.
+- **🧩 Advanced Query Building:** Honed my ability to craft complex SQL queries, utilizing subqueries, seamlessly joining tables with JOIN, and leveraging WITH clauses for efficient temporary table management.
+- **📊 Data Aggregation:** Gained familiarity with GROUP BY, using aggregate functions like COUNT() and AVG() to extract meaningful insights from large datasets.
+- **💡 Analytical Problem-Solving:** Sharpened my ability to translate real-world questions into insightful SQL queries, transforming raw data into actionable intelligence.
+- **📈 Power BI Visualization:** Enhanced my data storytelling skills by creating compelling visualizations in Power BI, turning numbers into clear, impactful charts.
 
 # Conclusions
 
 ### Insights
-From the analysis, several general insights emerged:
+From the analysis, several key insights about data analyst jobs emerged:
 
-1. **Top-Paying Data Analyst Jobs**: The highest-paying jobs for data analysts that allow remote work offer a wide range of salaries, the highest at $650,000!
-2. **Skills for Top-Paying Jobs**: High-paying data analyst jobs require advanced proficiency in SQL, suggesting it’s a critical skill for earning a top salary.
-3. **Most In-Demand Skills**: SQL is also the most demanded skill in the data analyst job market, thus making it essential for job seekers.
-4. **Skills with Higher Salaries**: Specialized skills, such as SVN and Solidity, are associated with the highest average salaries, indicating a premium on niche expertise.
-5. **Optimal Skills for Job Market Value**: SQL leads in demand and offers for a high average salary, positioning it as one of the most optimal skills for data analysts to learn to maximize their market value.
+1. Top-Paying Jobs 💰
+
+- **Global**: Salaries typically range from $285K to $400K, with exceptions like startups (e.g., Mantys – $600K). High salaries are driven by expertise in leadership, tech/AI innovation, finance, and security.
+- **Poland**: Salaries mostly hover around $111K, with Data Architect roles reaching $165K. The market emphasizes specialization within traditional sectors rather than emerging tech.
+
+2. Skills for Top-Paying Jobs 🔧
+
+- **SQL**, **Python**, and **Tableau** are the most crucial skills for securing the highest-paid roles in both the global and Polish data analytics markets.
+
+3. Most In-Demand Skills 🔥
+
+- The Top 5 most essential skills across the data analytics job market, both globally and in Poland, are **SQL**, **Excel**, **Python**, **Tableau**, and **Power BI**.
+
+4. Top-paying skills 💰🔧
+
+- **Global**: Niche technologies such as **SVN**, **Solidity**, and **Couchbase** command the highest salaries.
+- **Poland**: Cloud & Database skills like **MongoDB** and **AWS** lead the top-paying skill set.
+
+5. Most Optimal Skills to Learn 📚💡
+
+- **SQL**, **Python**, **Excel**, **Tableau**, and **Power BI** may not command the highest salaries, but their strong demand makes them fundamental for most data analysts.
+- **R** can be a valuable addition to a core skill set, offering competitive salaries and high demand in the global market.
+- High-paying and in-demand skills related to cloud-based infrastructure, workflow automation, and big data processing (e.g., **AWS**, **Azure**, **Airflow**, **Windows**, **GCP**, and **Spark**) present strong learning opportunities for career growth.
+
+6. Degree requirements 🎓
+
+**Global:** 39% of job postings do not explicitly mention a degree requirement, but one may still be expected.
+**Poland:** 56% of job postings do not specify a degree requirement, though it may still be necessary.
+
+7. Peak Hiring Months 📅📈
+
+- **Global & Poland:** The highest number of job postings occur in **January** and **August**, with a slowdown in the middle and end of the year.
 
 ### Closing Thoughts
 
-This project enhanced my SQL skills and provided valuable insights into the data analyst job market. The findings from the analysis serve as a guide to prioritizing skill development and job search efforts. Aspiring data analysts can better position themselves in a competitive job market by focusing on high-demand, high-salary skills. This exploration highlights the importance of continuous learning and adaptation to emerging trends in the field of data analytics.
+This project significantly enhanced my SQL, Power BI, and AI skills while providing valuable insights into the data analyst job market, both globally and in Poland. The findings serve as a practical guide for prioritizing skill development and optimizing job search strategies.
+
+For aspiring data analysts, focusing on high-demand and high-paying skills can provide a competitive edge in the industry. This exploration highlights the importance of continuous learning, adaptability, and staying updated on emerging trends, tools, and technologies in data analytics.
