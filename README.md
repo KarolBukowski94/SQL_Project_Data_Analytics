@@ -482,36 +482,36 @@ ORDER BY
 ### Insights
 From the analysis, several key insights about data analyst jobs emerged:
 
-1. Top-Paying Jobs 💰
+**Top-Paying Jobs 💰**
 
 - **Global**: Salaries typically range from $285K to $400K, with exceptions like startups (e.g., Mantys – $600K). High salaries are driven by expertise in leadership, tech/AI innovation, finance, and security.
 - **Poland**: Salaries mostly hover around $111K, with Data Architect roles reaching $165K. The market emphasizes specialization within traditional sectors rather than emerging tech.
 
-2. Skills for Top-Paying Jobs 🔧
+**Skills for Top-Paying Jobs 🔧**
 
 - **SQL**, **Python**, and **Tableau** are the most crucial skills for securing the highest-paid roles in both the global and Polish data analytics markets.
 
-3. Most In-Demand Skills 🔥
+**Most In-Demand Skills 🔥**
 
 - The Top 5 most essential skills across the data analytics job market, both globally and in Poland, are **SQL**, **Excel**, **Python**, **Tableau**, and **Power BI**.
 
-4. Top-paying skills 💰🔧
+**Top-paying skills 💰🔧**
 
 - **Global**: Niche technologies such as **SVN**, **Solidity**, and **Couchbase** command the highest salaries.
 - **Poland**: Cloud & Database skills like **MongoDB** and **AWS** lead the top-paying skill set.
 
-5. Most Optimal Skills to Learn 📚💡
+**Most Optimal Skills to Learn 📚💡**
 
 - **SQL**, **Python**, **Excel**, **Tableau**, and **Power BI** may not command the highest salaries, but their strong demand makes them fundamental for most data analysts.
 - **R** can be a valuable addition to a core skill set, offering competitive salaries and high demand in the global market.
 - High-paying and in-demand skills related to cloud-based infrastructure, workflow automation, and big data processing (e.g., **AWS**, **Azure**, **Airflow**, **Windows**, **GCP**, and **Spark**) present strong learning opportunities for career growth.
 
-6. Degree requirements 🎓
+**Degree requirements 🎓**
 
-**Global:** 39% of job postings do not explicitly mention a degree requirement, but one may still be expected.
-**Poland:** 56% of job postings do not specify a degree requirement, though it may still be necessary.
+- **Global:** 39% of job postings do not explicitly mention a degree requirement, but one may still be expected.
+- **Poland:** 56% of job postings do not specify a degree requirement, though it may still be necessary.
 
-7. Peak Hiring Months 📅📈
+**Peak Hiring Months 📅📈**
 
 - **Global & Poland:** The highest number of job postings occur in **January** and **August**, with a slowdown in the middle and end of the year.
 
